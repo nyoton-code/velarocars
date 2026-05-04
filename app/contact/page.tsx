@@ -5,7 +5,6 @@ import ContactInfo from "@/components/contact/ContactInfo";
 import ContactForm from "@/components/contact/ContactForm";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import WhatsapButton from "@/components/hooks/WhatsapButton";
 
 export const metadata: Metadata = {
   title: "Contact — Velaro Luxury Car Rental Marrakech",
@@ -103,8 +102,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <WhatsapButton />
     </main>
   );
 }

@@ -11,6 +11,7 @@ export default function CarBookingModal({
 }: {
   open: boolean;
   onClose: () => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   car: any;
 }) {
   return (

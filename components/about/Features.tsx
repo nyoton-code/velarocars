@@ -4,6 +4,7 @@
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { Variants } from "framer-motion";
 import {
   faBolt,
   faCar,
@@ -60,12 +61,12 @@ const FEATURES: Feature[] = [
   },
 ];
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 36 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: "easeOut", delay: i * 0.08 },
+    transition: { duration: 0.65, ease: [0.42, 0, 0.58, 1], delay: i * 0.08 },
   }),
 };
 

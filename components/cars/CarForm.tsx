@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function CarBookingForm({ car }: any) {
   const [form, setForm] = useState({
     name: "",
@@ -19,7 +20,7 @@ export default function CarBookingForm({ car }: any) {
  NEW BOOKING REQUEST
 
 Car: ${car.name}
-Price: €${car.price}/day
+Price: DH ${car.price}/day
 
 👤 Name: ${form.name}
 📞 Phone: ${form.phone}

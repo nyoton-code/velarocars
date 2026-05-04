@@ -1,13 +1,11 @@
 "use client";
 
-import { generateWhatsAppLink } from "@/utils/whatsapp";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ContractButton from "@/components/ContractButton";
 import { useState } from "react";
 import Image from "next/image";
 import CarBookingModal from "./CarBookingModal";
 interface Car {
-  image: string;
+  // image: string;
   name: string;
   price: number;
   transmission: string;

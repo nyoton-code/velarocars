@@ -95,7 +95,7 @@ export default function ContactInfo() {
               </a>
             ) : (
               <div className="flex items-center gap-4">
-                <InfoIcon icon={item.icon} />
+                {/* <InfoIcon icon={item.icon} /> */}
                 <InfoText label={item.label} value={item.value} />
               </div>
             )}

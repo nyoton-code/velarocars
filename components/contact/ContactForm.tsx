@@ -1,22 +1,10 @@
 "use client";
 
-// components/contact/ContactForm.tsx
-//
-// HOW IT WORKS:
-//   When the user clicks "Send Message", the form data is encoded into
-//   a WhatsApp deep link (wa.me) and opens WhatsApp (web or app) with
-//   a pre-filled message ready to send to YOUR number.
-//
-//   No backend, no API key, no cost. Works on all devices.
-//
-// ── SETUP ──────────────────────────────────────────────────────────────────
-//   Replace WHATSAPP_NUMBER below with your number in international
-//   format WITHOUT the + sign.
-//   Example: Morocco +212 600-123456  →  "212600123456"
 // ──────────────────────────────────────────────────────────────────────────
 
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 // ← YOUR NUMBER HERE
 const WHATSAPP_NUMBER = "212681117195";
@@ -38,14 +26,14 @@ const SUBJECTS = [
   "Other",
 ];
 
-const fadeUp = (delay = 0) => ({
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay },
+    transition: { duration: 0.6, ease: "easeOut", delay: 0 },
   },
-});
+};
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
@@ -132,7 +120,7 @@ export default function ContactForm() {
       />
 
       {/* header */}
-      <motion.div className="mb-8" variants={fadeUp(0)}>
+      <motion.div className="mb-8" variants={fadeUp}>
         <p className="text-[#e8a020] text-[11px] font-['DM_Sans'] font-semibold tracking-[0.22em] uppercase mb-2">
           Send a Message
         </p>
@@ -152,7 +140,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-4">
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-              variants={fadeUp(0.06)}
+              variants={fadeUp}
             >
               <Field
                 label="Full Name"
@@ -178,7 +166,7 @@ export default function ContactForm() {
 
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-              variants={fadeUp(0.1)}
+              variants={fadeUp}
             >
               <Field
                 label="Phone (optional)"
@@ -199,7 +187,7 @@ export default function ContactForm() {
               />
             </motion.div>
 
-            <motion.div variants={fadeUp(0.14)}>
+            <motion.div variants={fadeUp}>
               <label className="block text-white/40 font-['DM_Sans'] font-light text-xs tracking-widest uppercase mb-2">
                 Message
               </label>
@@ -221,7 +209,7 @@ export default function ContactForm() {
               {errors.message && <ErrorText text={errors.message} />}
             </motion.div>
 
-            <motion.div variants={fadeUp(0.18)}>
+            <motion.div variants={fadeUp}>
               <button
                 type="submit"
                 disabled={status === "sending"}
@@ -250,7 +238,7 @@ export default function ContactForm() {
             </motion.div>
 
             <motion.p
-              variants={fadeUp(0.22)}
+              variants={fadeUp}
               className="text-center text-white/20 font-['DM_Sans'] font-light text-xs"
             >
               <i className="fa-solid fa-circle-info mr-1.5" />

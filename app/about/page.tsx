@@ -65,7 +65,7 @@ export default function AboutPage() {
       <CTA
         backgroundImage="/images/cta-bg.jpg"
         ctaHref="/cars"
-        phone="+212 600-123456"
+        // phone="+212681117195"
       />
       <WhatsapButton />
     </main>
