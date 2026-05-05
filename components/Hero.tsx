@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="text-white space-y-6 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
             Rental Car in <br />
-            <span className="font-bold text-amber-500">Marrakech</span>
+            <span className="font-bold text-amber-500">Morocco</span>
           </h1>
 
           <p className="text-zinc-300 text-sm sm:text-base md:text-lg max-w-md mx-auto lg:mx-0">
