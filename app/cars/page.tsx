@@ -1,3 +1,4 @@
+"use client";
 import CarsSection from "@/components/cars/CarsSection";
 import HeroCars from "@/components/cars/HeroCars";
 
