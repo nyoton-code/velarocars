@@ -4,8 +4,15 @@ import { cars } from "@/data/cars";
 import CarCard from "./CarCard";
 import FeaturedCar from "./FeaturedCar";
 import { motion } from "framer-motion";
+import { useCars } from "../hooks/useCars";
 
 export default function CarsSection() {
+  const cars = useCars();
+
+  if (!cars.length) {
+    return <p>Loading...</p>;
+  }
+
   const featured = cars[0];
   const rest = cars.slice(1);
 
